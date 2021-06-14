@@ -1,0 +1,11 @@
+---
+ - hosts: webservers
+   tasks:
+    - name: Ansible zip multiple file example
+      archive:
+       path: 
+        - /home/ansible/test2.txt
+        - /home/ansible/test3.txt
+       dest: /home/ansible/test11.zip
+       format: zip
+

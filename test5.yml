@@ -1,0 +1,7 @@
+---
+ - hosts: webservers
+   become: true
+   tasks:
+    - name: Create User
+      user: name=Deepak password=deepak groups=wheel shell=/bin/bash
+

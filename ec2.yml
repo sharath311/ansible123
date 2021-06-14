@@ -1,0 +1,13 @@
+---
+- name: stop the AWS instance
+  hosts: localhost
+  tasks: 
+   - name: stop AWS instance
+     ec2:
+      region: ap-south-1
+      instance_ids: i-041746fe6479756e8
+      state: absent
+      aws_access_key: AKIA2I65XKYNIHNMCGWB
+      aws_secret_key: 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
+  
+   

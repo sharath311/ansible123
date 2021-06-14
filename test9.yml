@@ -1,0 +1,10 @@
+---
+ - hosts: webservers
+   become: true
+   tasks:
+    - name: Ansiblw zip file example
+      archive:
+       path: /home/ansible/text7.txt
+       dest: /home/ansible/test1.zip
+       format: zip
+

@@ -1,0 +1,6 @@
+---
+ - hosts: webservers
+   become: true
+   tasks:
+   - name: copy contect to file
+     copy: content="welcome to devops sunday session" dest=/var/www/html/index.html

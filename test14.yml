@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   become: true
+   tasks:
+   - name: install package
+     yum: name=vim,git state=latest

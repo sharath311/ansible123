@@ -1,0 +1,7 @@
+---
+ - hosts: webservers
+   become: true
+   tasks:
+    - name: Copy content to file
+      copy: content="Hello World \n" dest=/home/ansible/text7.txt
+      copy: src=/home/ec2-user/ansible/test1.yml dest=/tmp/text7.txt

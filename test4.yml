@@ -1,0 +1,11 @@
+---
+ - hosts: webservers
+   become: true
+   tasks:
+    - name: Create multiple file
+      file: path={{item}} state=touch
+      with_items:
+       - '/home/ansible/test1'
+       - '/home/ansible/test2'
+       - '/home/ansible/test3'
+
